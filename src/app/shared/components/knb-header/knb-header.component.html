@@ -1,0 +1,77 @@
+<section class="w-full z-50">
+  <section class="main-blue-bg">
+    <nav class="main-blue-bg container mx-auto relative py-4 navbar navbar-expand-lg navbar-light border-b border-white">
+      <div class="container-fluid w-full flex flex-wrap items-center px-6">
+        <button class="inline-block text-white mx-2" (click)="toggleSidebar()">
+          <fa-icon [icon]="faArrowAltCircleLeft"  *ngIf="sidebarState;else closed">
+          </fa-icon>
+          <ng-template #closed>
+            <fa-icon [icon]="faArrowAltCircleRight">
+            </fa-icon>
+          </ng-template>
+        </button>
+        <a class="tourney-thin text-lg sm:text-xl md:text-2xl text-black text-xl2 text-white" routerLink="/">jauynger.gov.kz</a>
+        <!-- Collapsible wrapper -->
+      </div>
+    </nav>
+  </section>
+  <section class="main-blue-bg-opacity">
+    <nav class="container mx-auto  bg-transparent relative flex flex-wrap items-center justify-between py-4  text-gray-500 hover:text-gray-700 focus:text-gray-700 navbar navbar-expand-lg navbar-light
+  ">
+      <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+        <!-- Hamburger button for mobile view -->
+        <button
+          class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button"
+          data-te-collapse-init
+          data-te-target="#navbarSupportedContent2"
+          aria-controls="navbarSupportedContent2"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <!-- Hamburger icon -->
+          <span class="[&>svg]:w-7">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-7 w-7">
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </span>
+        </button>
+
+        <!-- Collapsible navbar container -->
+        <div
+          class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+          id="navbarSupportedContent2"
+          data-te-collapse-item>
+          <!-- Left links -->
+          <ul class="navbar-nav md:flex pl-0 list-style-none mr-auto">
+            <li class="nav-item mx-2">
+              <a class="comforta nav-link text-white hover:main-color focus:text-blue-900 p-0 text-sm" routerLink="/knb/received-requests">
+                Поступившие
+                <span class="inline-block py-1 px-1.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-red-600 text-white rounded ml-2">{{sendedCount}}</span>
+              </a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="comforta nav-link text-white hover:main-color focus:text-blue-900 p-0 text-sm" routerLink="/knb/accepted-requests">Согласование</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="comforta nav-link text-white hover:main-color focus:text-blue-900 p-0 text-sm" routerLink="/knb/rejected-requests">Отклоненные</a>
+            </li>
+
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+
+      </div>
+    </nav>
+  </section>
+
+</section>
