@@ -31,12 +31,10 @@
               "src/assets"
             ],
             "styles": [
-              "https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/css/tw-elements.min.css",
               "./node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js",
               "src/assets/js/main.js"
             ]
           },
