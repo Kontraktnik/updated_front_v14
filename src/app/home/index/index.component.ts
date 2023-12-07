@@ -13,6 +13,7 @@ import {QualificationService} from "../../shared/services/qualification.service"
 import {Calculation} from "../../shared/models/calculation/calculation";
 import {CalculationServiceService} from "../../shared/services/calculation-service.service";
 import * as signalR from "@microsoft/signalr"
+import {SalaryArea} from "../../shared/models/calculation/salaryArea";
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -27,6 +28,8 @@ export class IndexComponent implements OnInit {
   serviceYears$: Observable<IResponse<ServiceYear[]>>;
   //@ts-ignore
   qualifications$: Observable<IResponse<Qualification[]>>;
+  //@ts-ignore
+  areaSalaries$: Observable<IResponse<SalaryArea[]>>;
   //@ts-ignore
   calculationForm: UntypedFormGroup;
   //@ts-ignore
@@ -45,13 +48,16 @@ export class IndexComponent implements OnInit {
     this.getPositions();
     this.getServiceYears();
     this.getQualifications();
-    
+    this.getAreaSalaries();
+
   }
 
   getArmyRanks(){
     this.armyRanks$ = this.armyRankService.getAll(true);
   }
-
+  getAreaSalaries(){
+    this.areaSalaries$ = this.calculationService.getSalaryAreas();
+  }
   getPositions(){
     this.positions$ = this.positionService.getAll(true);
   }
@@ -68,7 +74,9 @@ export class IndexComponent implements OnInit {
         positionId:new UntypedFormControl("",Validators.required),
         armyRankId:new UntypedFormControl("",Validators.required),
         serviceYearId:new UntypedFormControl("",Validators.required),
-        qualificationId:new UntypedFormControl("",Validators.required)
+        qualificationId:new UntypedFormControl("",Validators.required),
+        areaId:new UntypedFormControl("",Validators.required),
+        personQuantity:new UntypedFormControl(0,Validators.required),
       }
     )
   }

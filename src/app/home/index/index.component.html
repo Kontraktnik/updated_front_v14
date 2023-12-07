@@ -266,6 +266,44 @@
               </div>
             </div>
           </div>
+          <select [className]="'comforta my-2 text-gray-400 px-4 py-3 bg-transparent rounded-none border-b-2 w-full '
+                          + (calculationForm.controls['areaId'].invalid && (calculationForm.controls['areaId'].dirty || calculationForm.controls['areaId'].touched) ? 'border-red-500' : 'border-black')"
+                  formControlName="areaId"
+                  *ngIf="(areaSalaries$|async)?.data != null"
+          >
+            <option value="">Выберите Место службы </option>
+            <option *ngFor="let areaSalary of (areaSalaries$|async)?.data" [value]="areaSalary.id">
+              {{areaSalary.titleRu}}
+            </option>
+          </select>
+          <div class="text-red-500" *ngIf="calculationForm.controls['areaId'].invalid && (calculationForm.controls['areaId'].dirty || calculationForm.controls['areaId'].touched)">
+            <div *ngIf="calculationForm.controls['areaId'].errors">
+              <div *ngIf="calculationForm.controls['areaId'].errors.required">
+                Выберите Место службы
+              </div>
+            </div>
+          </div>
+          <select [className]="'comforta my-2 text-gray-400 px-4 py-3 bg-transparent rounded-none border-b-2 w-full '
+                          + (calculationForm.controls['personQuantity'].invalid && (calculationForm.controls['personQuantity'].dirty || calculationForm.controls['personQuantity'].touched) ? 'border-red-500' : 'border-black')"
+                  formControlName="personQuantity"
+                  *ngIf="(areaSalaries$|async)?.data != null"
+          >
+            <option value="0">Выберите кол-во членов семьи </option>
+            <option value="0">Нет членов семьи </option>
+            <option value="1">1 человек </option>
+            <option value="2">2 человек </option>
+            <option value="3">3 человек </option>
+            <option value="4">4 человек </option>
+            <option value="5">5 человек </option>
+            <option value="6">7 человек </option>
+          </select>
+          <div class="text-red-500" *ngIf="calculationForm.controls['personQuantity'].invalid && (calculationForm.controls['personQuantity'].dirty || calculationForm.controls['personQuantity'].touched)">
+            <div *ngIf="calculationForm.controls['personQuantity'].errors">
+              <div *ngIf="calculationForm.controls['personQuantity'].errors.required">
+                Выберите Кол-во членов семьи
+              </div>
+            </div>
+          </div>
           <button [disabled]="calculationForm.invalid"  [class]="'inline-block text-white mt-5 text-sm px-8 py-3 rounded ' + (calculationForm.invalid ? 'bg-gray-400' :'bg-red-color hover:bg-red-900')">
             Рассчитать
           </button>
