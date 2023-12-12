@@ -9,19 +9,32 @@
       </div>
       <div class="modal-body relative p-4" *ngIf="fileUrl">
         <section *ngIf="!loading">
-          <div class="w-full" *ngIf="imageExtension.includes(get_url_extension(fileUrl??''));else fileBrowser">
-            <img class="max-w-full" src="{{fileUrl | authFile:true}}">
-          </div>
-          <div class="bg-success-color">
-            <ng-template #fileBrowser>
-              <ngx-doc-viewer
-                class="w-full"
-                url="{{fileUrl | authFile:true}}"
-                [viewer]="wordExtension.includes(get_url_extension(fileUrl??'')) ? 'office' : 'google'"
-                style="width:100%;height:50vh;">
-              </ngx-doc-viewer>
-            </ng-template>
-          </div>
+          <section *ngIf="fileUrl.startsWith('https://jauynger.gov.kz');else serverFile">
+            <ngx-doc-viewer
+              class="w-full"
+              url="{{fileUrl}}"
+              [viewer]="'google'"
+              style="width:100%;height:50vh;">
+            </ngx-doc-viewer>
+          </section>
+          <ng-template #serverFile>
+            <section>
+              <div class="w-full" *ngIf="imageExtension.includes(get_url_extension(fileUrl??''));else fileBrowser">
+                <img class="max-w-full" src="{{fileUrl | authFile:true}}">
+              </div>
+              <div class="bg-success-color">
+                <ng-template #fileBrowser>
+                  <ngx-doc-viewer
+                    class="w-full"
+                    url="{{fileUrl | authFile:true}}"
+                    [viewer]="wordExtension.includes(get_url_extension(fileUrl??'')) ? 'office' : 'google'"
+                    style="width:100%;height:50vh;">
+                  </ngx-doc-viewer>
+                </ng-template>
+              </div>
+            </section>
+          </ng-template>
+
         </section>
         <section *ngIf="loading">
           ...loading

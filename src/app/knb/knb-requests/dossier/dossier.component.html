@@ -138,25 +138,25 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Удостоверение личности </p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/identity_card.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
         <!--Военный билет  -->
         <!--Свидетельство о рождении кандидата  -->
-        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
-          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Свидетельство о рождении кандидата </p>
-          <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
-               <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
-            </span>
-        </div>
+        <!--        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">-->
+        <!--          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Свидетельство о рождении кандидата </p>-->
+        <!--          <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">-->
+        <!--               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>-->
+        <!--               <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>-->
+        <!--            </span>-->
+        <!--        </div>-->
         <!--Свидетельство о рождении кандидата  -->
         <!--Водительское удостоверение   -->
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Водительское удостоверение</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/driver_license.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -165,7 +165,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения о наличии либо отсутствии судимости</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/legal_form.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -174,7 +174,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения о доходах</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/income.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -183,7 +183,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Свидетельство о браке</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/marriage_doc.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -192,7 +192,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения о доходах супруги</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/income_wife.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -201,7 +201,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Свидетельство о рождении детей</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/children.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -210,19 +210,19 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Кредитная история</p>
           <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/credit_info.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
         <!--Кредитная история     -->
         <!--Сведения о наличии ИП  -->
-        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
-          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения о наличии ИП</p>
-          <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
-                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>
-            </span>
-        </div>
+        <!--        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">-->
+        <!--          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения о наличии ИП</p>-->
+        <!--          <span *ngIf="(survey$|async)?.data?.identityCardUrl as fileBrowse">-->
+        <!--               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>-->
+        <!--                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.identityCardUrl != null ? faCheck : faTimes"></fa-icon>-->
+        <!--            </span>-->
+        <!--        </div>-->
         <!--Сведения о наличии ИП -->
         <!--Сведения с туберкулезного диспансера   -->
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
@@ -234,19 +234,19 @@
         </div>
         <!--Сведения с туберкулезного диспансера  -->
         <!--Сведения кожно-венерологического диспансера    -->
-        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
-          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения кожно-венерологического диспансера</p>
-          <span *ngIf="(survey$|async)?.data?.dermatologUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
-                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.dermatologUrl != null ? faCheck : faTimes"></fa-icon>
-            </span>
-        </div>
+        <!--        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">-->
+        <!--          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения кожно-венерологического диспансера</p>-->
+        <!--          <span *ngIf="(survey$|async)?.data?.dermatologUrl as fileBrowse">-->
+        <!--               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>-->
+        <!--                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.dermatologUrl != null ? faCheck : faTimes"></fa-icon>-->
+        <!--            </span>-->
+        <!--        </div>-->
         <!--Сведения кожно-венерологического диспансера   -->
         <!--Сведения с психоневрологического диспансера -->
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения с психоневрологического диспансера</p>
           <span *ngIf="(survey$|async)?.data?.psychoNeurologicalUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/psycho.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.psychoNeurologicalUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -255,7 +255,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения с наркологического диспансера</p>
           <span *ngIf="(survey$|async)?.data?.narcologicalUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/narkolog.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.narcologicalUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>

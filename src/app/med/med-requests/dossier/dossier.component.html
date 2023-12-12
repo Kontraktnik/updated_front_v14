@@ -1,3 +1,5 @@
+
+
 <div class="container mx-auto py-14" *ngIf="(survey$|async)!=null && (survey$|async)?.data != null">
   <!--Анкета в на других этапах-->
   <div class="overflow-x-auto shadow-lg bg-white rounded px-8 py-8" *ngIf="(survey$|async)?.data?.currentStepId != null && ((survey$|async)?.data?.currentStepId != 2)">
@@ -94,20 +96,20 @@
             </span>
         </div>
         <!--Сведения с туберкулезного диспансера  -->
-        <!--Сведения кожно-венерологического диспансера    -->
-        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
-          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения кожно-венерологического диспансера</p>
-          <span *ngIf="(survey$|async)?.data?.dermatologUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
-                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.dermatologUrl != null ? faCheck : faTimes"></fa-icon>
-            </span>
-        </div>
-        <!--Сведения кожно-венерологического диспансера   -->
+<!--        &lt;!&ndash;Сведения кожно-венерологического диспансера    &ndash;&gt;-->
+<!--        <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">-->
+<!--          <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения кожно-венерологического диспансера</p>-->
+<!--          <span *ngIf="(survey$|async)?.data?.dermatologUrl as fileBrowse">-->
+<!--               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>-->
+<!--                <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.dermatologUrl != null ? faCheck : faTimes"></fa-icon>-->
+<!--            </span>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;Сведения кожно-венерологического диспансера   &ndash;&gt;-->
         <!--Сведения с психоневрологического диспансера -->
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения с психоневрологического диспансера</p>
           <span *ngIf="(survey$|async)?.data?.psychoNeurologicalUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/psycho.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.psychoNeurologicalUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
@@ -116,7 +118,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения с наркологического диспансера</p>
           <span *ngIf="(survey$|async)?.data?.narcologicalUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/narkolog.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.narcologicalUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>

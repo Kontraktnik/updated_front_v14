@@ -314,11 +314,16 @@
     <div class="col-span-12 flex items-center  md:col-span-4 main-blue-bg py-4 px-6">
       <div class="comforta-bold text-center w-full">
         <p class="text-xl text-white">
-          Ваш должностной оклад
+          Ваш предполагаемый доход
         </p>
-        <p class="text-xl text-white" *ngIf="(calculationResult$|async)?.data">
-          {{(calculationResult$|async)?.data}} KZT
-        </p>
+        <div class="comforta-bold text-xl text-white py-5" *ngIf="(calculationResult$|async)?.data">
+          {{(calculationResult$|async)?.data | currency:'':''}} KZT
+          <br/>
+          <small class="text-sm mt-2">
+            *Суммы указываются предварительные и предоставлены для первичного ознакомления. Конкретные суммы дохода будут определяются при подписании контракта
+          </small>
+        </div>
+
       </div>
 
     </div>
