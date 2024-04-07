@@ -91,7 +91,7 @@
         <div class="form-group text-md md:text-lg py-4 sm:flex justify-between">
           <p class="comforta font-bold text-md sm:text-lg md:text-xl">Сведения с туберкулезного диспансера</p>
           <span *ngIf="(survey$|async)?.data?.tuberUrl as fileBrowse">
-               <a (click)="selectCurrentFile(fileBrowse)" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
+               <a  (click)="selectCurrentFile('https://jauynger.gov.kz/assets/docs/tuberkulez.pdf')" data-bs-toggle="modal" data-bs-target="#browseFileModal" class="cursor-pointer underline light-blue text-sm sm:text-md md:text-lg">Посмотреть</a>
                 <fa-icon class="success-color mx-2" [icon]="(survey$|async)?.data?.tuberUrl != null ? faCheck : faTimes"></fa-icon>
             </span>
         </div>
